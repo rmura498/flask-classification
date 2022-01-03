@@ -21,9 +21,6 @@ def classifications():
         image_id = form.image.data
         model_id = form.model.data
 
-        """result_dict = dict()
-        classification_output=classify_image(model_id=model_id, img_id=image_id)
-        result_dict['data']=classification_output"""
 
         redis_url = Configuration.REDIS_URL
         redis_conn = redis.from_url(redis_url)
