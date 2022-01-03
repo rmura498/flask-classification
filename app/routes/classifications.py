@@ -23,7 +23,8 @@ def classifications():
         # TODO create the result_dict, with a key 'data' that stores
         #  the output of the classification function
         result_dict = dict()
-        classification_output=classify_image(model_id=model_id, image_id=image_id)
+        classification_output=classify_image(model_id=model_id, img_id=image_id)
+        result_dict['data']=classification_output
         # returns the image classification output from the specified model
         return render_template('classification_output.html', image_id=image_id, results=result_dict)
 
